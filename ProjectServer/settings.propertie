@@ -1,0 +1,6 @@
+#Sun Apr 12 20:03:04 CEST 2020
+user=root
+port=3000
+url=jdbc\:mysql\://localhost\:3306/onlinemobileshop
+enconding=?useUnicode\=true&characterEncoding\=UTF-8
+pass=a

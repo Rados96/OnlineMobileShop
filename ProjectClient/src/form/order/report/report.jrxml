@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="02ba0b4a-8c5b-479e-9577-517519d7d1ec">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="1a880b6e-f898-4f2c-92f0-bdac4900fba5"/>
+	<subDataset name="Table Dataset 2" uuid="8febf428-b135-40ae-8678-6c34b55ec120"/>
+	<subDataset name="dataset1" uuid="8cebcc2d-5181-4447-aea4-8006d1902c60"/>
+	<parameter name="orderID" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     *
+FROM
+     `order` o INNER JOIN `orderitem` oi ON o.`orderID` = oi.`orderID`
+     INNER JOIN `client` c ON o.`clientID` = c.`clientID`
+     INNER JOIN `seller` s ON o.`sellerID` = s.`sellerID`
+     INNER JOIN `product` p ON oi.`productID` = p.`productID`
+WHERE
+     o.orderID = $P{orderID}]]>
+	</queryString>
+	<field name="orderID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="clientID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sellerID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="serialNumber" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="productID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="quantity" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="price" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="clientCode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telephone" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="adress" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cityID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="clientType" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="surname" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="username" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="password" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="productCode" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="model" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="manufacturerID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="productType" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="orderID">
+		<groupExpression><![CDATA[$F{orderID}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="155" y="20" width="296" height="33" uuid="4821f12b-b818-4740-942c-731ff788353d"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IZVEŠTAJ O NARUDŽBI]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="484" y="53" width="100" height="20" uuid="256357ae-e368-4e9d-84e1-1c78629a41f9"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="152" splitType="Stretch">
+			<textField>
+				<reportElement x="90" y="107" width="50" height="20" uuid="0f449f0d-7528-4ba5-b282-c86cfb1e008a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="14" width="66" height="20" uuid="2aba0f68-085e-489f-888a-6961c077965d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Prodavac:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="45" width="66" height="20" uuid="7a022df9-6b67-4306-b65c-99e18437166c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Naručilac:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="78" width="44" height="20" uuid="b5f5d96b-c392-40e5-a298-66792639bebb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Cena:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="78" width="65" height="20" uuid="e9f6d873-acb4-4435-96fc-ea2a318a3128"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalPrice}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="107" width="54" height="20" uuid="6cc1affd-c194-4d38-809b-03915393c768"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Datum:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="45" width="154" height="20" uuid="8b46a5ea-e9ed-403c-91a7-3f4e5bbb5d7d"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="16" width="45" height="20" uuid="fd2e5271-d699-42ae-8c74-3312f21b7e11"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="16" width="79" height="20" uuid="0a97ebbf-e367-4358-8569-cc7825e7de29"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{surname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="78" width="100" height="20" uuid="07940677-e8de-471c-a1dc-b9481370f023"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[dinara]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="1" width="100" height="20" uuid="4df894e1-f119-48f2-9fd6-eaf59a76ab35"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Redni broj]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="1" width="100" height="20" uuid="1906683c-b426-4875-b08a-a6efbdc27a2e"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Proizvod]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="1" width="100" height="20" uuid="33c05c3b-3722-4ee2-9b72-a29949bf052c"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Količina]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="1" width="51" height="20" uuid="41fd7acb-d4b5-4573-b07e-bd5812bbfde8"/>
+				<textElement textAlignment="Justified">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cena]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="18" width="570" height="1" uuid="f711e741-6c8d-42df-b6d8-b24213c7e351"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="23" y="0" width="100" height="20" uuid="f5793c08-ad75-4e30-8861-a5b2584daad8"/>
+				<textFieldExpression><![CDATA[$F{serialNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="324" y="0" width="100" height="20" uuid="4b77f960-739a-4c2e-a463-8262f6a4d37e"/>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="0" width="61" height="20" uuid="5cefed29-8886-4d61-84ca-2acf2d1ef7cb"/>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="169" y="5" width="100" height="20" uuid="86851ace-e95f-4f80-b6c7-c10946cb78f3"/>
+				<textFieldExpression><![CDATA[$F{model}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="522" y="0" width="56" height="20" uuid="ad292b11-b061-4424-8281-022863e1d36a"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[dinara]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="451" y="34" width="80" height="20" uuid="18f078a0-7316-4135-a145-7d2e8a220705"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Strana "+$V{PAGE_NUMBER}+" od"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="531" y="34" width="40" height="20" uuid="004d8130-bc41-42ba-8efa-92c858dff2c1"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
